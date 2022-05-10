@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.display-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 66vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.display-img {
+  -ms-flex-preferred-size: 54%;
+      flex-basis: 54%;
+  background-repeat: no-repeat;
+}
+
+.header-container {
+  -ms-flex-preferred-size: 46%;
+      flex-basis: 46%;
+}
+
+.header-container .display-text {
+  font-family: "League Spartan", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+  text-align: left;
+  position: relative;
+}
+
+.header-container h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5em;
+}
+
+.header-container p {
+  color: #a1a1a1;
+  margin-bottom: 1em;
+  line-height: 15px;
+}
+
+.header-container p.spaced-letter {
+  letter-spacing: 5px;
+  color: black;
+  font-size: 14px;
+}
+
+.header-container p.spaced-letter span {
+  margin-left: 1.5em;
+}
+
+.header-container .display-navigation {
+  position: absolute;
+   bottom: 34vh;
+  left: 54%;
+  background-color: black;
+  padding: 1.2em 2em; 
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 0;
+}
+
+
+@media (max-width: 550px) {
+  .display-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    height: 100vh;
+  }
+  .display-img {
+    background-repeat: no-repeat;
+    height: 50vh;
+    width: auto;
+  }
+  .header-container h1 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5em;
+  }
+
+  .header-container .display-navigation {
+    right: 0%;
+    left: unset;
+    bottom: 50vh;
+    padding: 1em;  
+  }
+
+  
+    .header-container .display-text {
+      display: block;
+      margin-top: 15%;   
+      width: 100%;
+ padding: 1.5em 1em 0.5em 1em; 
+  }
+
+  .header-container .display-text p{
+   margin-bottom: 2em;
+   
+}
+
+}
+
+@media (min-width: 550px) and (max-width: 900px ){
+  .display-container {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    height: 45vh;
+  }
+
+  .header-container .display-navigation {
+    right: 40%;
+    left: unset;
+    bottom: 55vh;
+    padding: 1em;  
+  }
+
+  .display-img {
+    background-repeat: no-repeat;
+    height: 50vh;
+  }
+}
+
+
+@media (min-width: 900px) and (max-width: 1150px ){
+  .display-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 85vh;
+  }
+
+  .header-container .display-navigation {
+    left: 50%;
+    bottom: 15vh;
+    padding: 1em;  
+  }
+
+  .display-img {
+    background-repeat: no-repeat;
+  }
+}
+
+/*# sourceMappingURL=setDisplayElements.css.map */

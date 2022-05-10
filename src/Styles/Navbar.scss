@@ -1,0 +1,30 @@
+@import 'variables';
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap');
+
+
+
+.nav-container{
+    @include flex(row);
+
+    p{
+
+    color: white;
+    margin-right: 2em;
+    font-weight: 600;
+    font-size: 22px;
+    }
+
+    nav{
+        color: white;
+        
+         a{
+            color: white;
+            font-family: $font-family;
+            text-decoration: none;
+            padding-right: 2em;
+    
+      }
+
+    
+  }
+}

@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useLayoutEffect } from 'react'
+import { Navbar } from './Components/Navbar';
+import {About } from  './Components/About';
+import SetDisplayElements from './Components/SetDisplayElements';
+
+
 
 function App() {
+  function useWindowWidth() {
+    const [width, setWidth] = useState(0);
+    useLayoutEffect(() => {
+      function updateSize() {
+        setWidth(window.innerWidth);
+      }
+      window.addEventListener('resize', updateSize);
+      updateSize();
+      return () => window.removeEventListener('resize', updateSize);
+    }, []);
+    return width;
+  }  
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SetDisplayElements width={useWindowWidth()}> 
+         <Navbar />
+      </SetDisplayElements>
+      <About />
     </div>
   );
 }

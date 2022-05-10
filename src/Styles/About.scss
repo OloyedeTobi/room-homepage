@@ -1,0 +1,51 @@
+@import 'variables';
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap');
+
+.About-container{
+    display: flex;
+    height: 30vh;
+    font-family: $font-family;
+
+    .flex-1{
+        flex-flow: 30%;
+    }
+
+    .flex-2{
+        @include flex(column);
+        flex-basis: 40%;
+        text-align: center;
+        height: 100%;
+        margin: 0 auto;
+
+
+        div{
+            width: 80%;
+            text-align: left;
+
+            h2{
+
+                text-transform: uppercase;
+                font-size: 16px;
+                margin-bottom: 1em;
+            }
+
+            p{
+                color: $Dark-Gray;
+                line-height: 15px;
+            }
+     }
+    }
+}
+
+
+
+//mobile
+
+@media (max-width: 550px){
+    .About-container{
+        @include flex(column);
+        height: auto;
+     }
+    }
+
+    
