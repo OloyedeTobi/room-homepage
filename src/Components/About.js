@@ -5,7 +5,7 @@ export const About = () => {
       <>
       <div className="About-container">
         <div className="flex-1">
-            <img src = "images/image-about-dark.jpg"></img>
+            <img src = "images/image-about-dark.jpg" alt='' ></img>
         </div>
         <div className="flex-2">
             <div>
@@ -19,7 +19,7 @@ export const About = () => {
             </div>
         </div>
         <div className="flex-1">
-        <img src = "images/image-about-light.jpg"></img>
+        <img src = "images/image-about-light.jpg" alt='' ></img>
         </div>
       </div>
       </>
